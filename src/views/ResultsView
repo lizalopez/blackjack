@@ -1,0 +1,11 @@
+class window.ResultsView extends Backbone.View
+
+  id: 'results'
+
+  template: _.template '<%= endGameMsg %>'
+
+  initialize: ->
+    @render()
+
+  render: ->
+    @$el.html @template @model

@@ -1,3 +1,12 @@
+img {
+  width: 100px;
+  height: 140px;
+}
+
+.play-button {
+  display: none;
+}
+
 .card {
   float: left;
   border: solid 1px black;
@@ -9,6 +18,7 @@
 
 .covered {
   background-color: black;
+  content:url(card-back.png);
 }
 
 .hand {
