@@ -10,8 +10,8 @@ class window.AppView extends Backbone.View
     'click .hit-button': -> @model.get('playerHand').hit()
     'click .stand-button': -> @model.get('playerHand').stand()
     'click .play-button': ->
-      @model.get('playerHand').reset(null)
-      @model.get('dealerHand').reset(null)
+      console.log "play clicked"
+      @model.playAgain()
 
   initialize: ->
     @model.get('dealerHand').on "endGame", =>

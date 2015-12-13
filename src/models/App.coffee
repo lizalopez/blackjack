@@ -25,3 +25,9 @@ class window.App extends Backbone.Model
             @set 'endGameMsg', "Dealer wins!"
           else 
             @set 'endGameMsg', "Push"
+
+  playAgain: ->
+    @get('playerHand').reset(null)
+    @get('dealerHand').reset(null)
+    @set 'playerHand', @get('deck').dealPlayer()
+    @set 'dealerHand', @get('deck').dealDealer()
